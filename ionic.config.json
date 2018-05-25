@@ -1,8 +1,8 @@
 {
   "name": "P2_Ionic",
-  "app_id": "3ab5eb92",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "app_id": "98f5d8f0"
 }
