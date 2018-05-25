@@ -1,0 +1,37 @@
+<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Practica2 Ionic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scroll='true'>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Titulo</ion-label>
+      <ion-input #title type="text" value=''></ion-input>
+    </ion-item>
+    <button ion-button full (click)="search(title.value); title.value=''" >Buscar pelicula</button>
+    <div *ngIf="name">
+      <ion-card>
+        <img [src]="coverURL"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{name}}
+          </ion-card-title>
+          <p>
+            {{year}}
+            {{director}}
+            {{stars}}
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left small (click)="presentPopover($event)">TRAILER</button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+  </ion-list>
